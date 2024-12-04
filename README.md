@@ -52,22 +52,3 @@ Detailed guides can be found in the docs/ directory:
 	•	Getting Started
 	•	Ansible Guide
 	•	Python Tools Guide
-
-## 🤝 Contributing
-
-We welcome contributions! Please read the CONTRIBUTING.md guide before making changes.
-
-⚖️ License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## 🌟 Acknowledgments
-
-Special thanks to the storage and SAN community for their continuous support and contributions.
-
-This README is structured to:
-- Provide an overview of the repository.
-- Explain its structure and purpose.
-- Guide users on getting started and contributing.
-
-Feel free to adjust the placeholders like `your_username` and tweak sections to fit your style!
