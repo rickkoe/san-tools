@@ -8,24 +8,36 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import PatternFill, colors, Font, Color
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.utils import get_column_letter
-
 if len(sys.argv) == 2:
     # If an argument exists, the first argument is customer name
     customer_name = sys.argv[1]
 else:
     customer_name = input('Enter customer name: ')
-import importlib
-config = importlib.import_module(f'data.{customer_name}.config')
 now = datetime.now()
 date_time_str = now.strftime("%Y%m%d_%H%M%S")
+
 # Import custom functions
-from my_mods.general import iterate_dict, iterate_list, clear
-from my_mods.san import wwpn_colonizer
-customer_path = os.path.join(config.customer_path, customer_name)
+from python_tools.utils.common_modules.general import iterate_dict, iterate_list, clear
+from python_tools.utils.common_modules.san import wwpn_colonizer
+
+
+class Config:
+    def __init__(self, fs_input, fs_output, ds_input, ds_output, customer_path, customer_name):
+        self.fs_input = fs_input
+        self.fs_output = fs_output
+        self.ds_input = ds_input
+        self.ds_output = ds_output
+        self.customer_path = customer_path
+        self.customer_name = customer_name
+    def __str__(self):
+        return self.customer_name
+customer_path = os.path.join(Config.customer_path, 
+                             
+                             customer_name)
 
 def main():
-    input_directory = os.path.join(customer_path, config.fs_input)
-    output_directory = os.path.join(customer_path, config.fs_output)
+    input_directory = os.path.join(customer_path, Config.fs_input)
+    output_directory = os.path.join(customer_path, Config.fs_output)
 
     try:
         os.listdir(input_directory)
