@@ -4,47 +4,30 @@ A collection of Python scripts and Ansible playbooks for automating tasks in Sto
 
 ---
 
-## 📁 Directory Structure
-
-san-tools/
-├── ansible/                  # Ansible playbooks and roles
-│   ├── playbooks/            # Standalone playbooks
-│   ├── roles/                # Reusable roles for IBM, Brocade, and Cisco
-│   └── inventory/            # Inventory files and variables
-├── python_tools/             # Python scripts and utilities
-│   ├── ibm_storage/          # IBM Storage-specific scripts
-│   ├── brocade_san/          # Brocade SAN-specific scripts
-│   ├── cisco_san/            # Cisco SAN-specific scripts
-│   └── utils/                # Shared utilities and helper scripts
-├── docs/                     # Documentation
-├── tests/                    # Test scripts for validation
-└── .gitignore                # Git ignore file
-
----
-
 ## 🚀 Getting Started
 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/your_username/san-tools.git
    cd san-tools
+   ```
 
-	2.	Set up dependencies:
+2. **Set up dependencies**:
 	•	Install Python requirements (if applicable):
-
-pip install -r requirements.txt
-
+   ```bash
+    pip install -r requirements.txt
+    ```
 
 	•	Install Ansible if not already installed:
-
-sudo apt install ansible
-
-
-	3.	Configure your environment:
+    ```bash
+    dnf install ansible
+    ```
+3.	Configure your environment:
 	•	Update inventory files in ansible/inventory/.
 	•	Modify playbook variables in group_vars/.
 
-🛠️ Tools Overview
+---
+## 🛠️ Tools Overview
 
 Ansible
 
