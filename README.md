@@ -26,10 +26,10 @@ A collection of Python scripts and Ansible playbooks for automating tasks in Sto
 	•	Update inventory files in ansible/inventory/.
 	•	Modify playbook variables in group_vars/.
 
----
+
 ## 🛠️ Tools Overview
 
-Ansible
+### Ansible
 
 Automate complex tasks like provisioning storage, configuring SAN switches, and managing storage networks.
 	•	Example: Provision IBM FlashSystem volumes
@@ -38,21 +38,22 @@ ansible-playbook ansible/playbooks/provision_storage.yml
 
 
 
-Python
+### Python
 
 Scripts for interacting with SAN environments via REST APIs and CLI tools.
 	•	Example: Create a new IBM FlashSystem volume
 
 python python_tools/ibm_storage/create_volume.py
 
-📚 Documentation
+
+## 📚 Documentation
 
 Detailed guides can be found in the docs/ directory:
 	•	Getting Started
 	•	Ansible Guide
 	•	Python Tools Guide
 
-🤝 Contributing
+## 🤝 Contributing
 
 We welcome contributions! Please read the CONTRIBUTING.md guide before making changes.
 
@@ -60,7 +61,7 @@ We welcome contributions! Please read the CONTRIBUTING.md guide before making ch
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-🌟 Acknowledgments
+## 🌟 Acknowledgments
 
 Special thanks to the storage and SAN community for their continuous support and contributions.
 
